@@ -101,6 +101,7 @@
     </Compile>
     <Compile Include="Models\ClsBisiesto.cs" />
     <Compile Include="Models\ClsDispensador.cs" />
+    <Compile Include="Models\ClsEstudiante.cs" />
     <Compile Include="Models\ClsPersona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
