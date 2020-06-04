@@ -1,0 +1,32 @@
+﻿@model Lab2_MVC_LLATASI.Models.ClsDispensador
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1>Disepensador</h1>
+        <br />
+
+        @using (Html.BeginForm("VisualizarDispensado", "Dispensador", FormMethod.Post))
+        {
+            <p>
+                @Html.LabelFor(model => model.importe, "Ingrese Importe: ")
+                @Html.TextBoxFor(model => model.importe)
+                @Html.ValidationMessage("Debe ingresar un valor")
+
+                <br /> <br />
+                <input type="submit" value="Calcular" />
+            </p>
+        }
+
+    </div>
+</body>
+</html>

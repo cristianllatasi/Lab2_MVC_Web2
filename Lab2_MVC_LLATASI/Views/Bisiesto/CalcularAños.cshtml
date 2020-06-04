@@ -1,0 +1,65 @@
+﻿@model  Lab2_MVC_LLATASI.Models.ClsBisiesto
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CalcularAños</title>
+</head>
+<body>
+    <div>
+        <center><b><u>Bisiesto y No bisiesto</u></b></center>
+        <br />
+        @{
+            Model.bisiesto = "";
+            Model.nobisiesto = "";
+            Model.resultado = "";
+
+            for (int i = Model.inicio; i <= Model.final; i++)
+            {
+               
+                if (i % 400 == 0)
+                {
+                    Model.bisiesto = Model.bisiesto + i + "\n";
+                }
+                else if (i % 4 == 0 && i % 100 != 0)
+                {
+                    Model.bisiesto += i + "\n";
+                    Model.todo += i + " Bisiesto" + "\n";
+                }
+                else
+                {
+                    Model.nobisiesto += i + "\n";
+                    Model.todo += i + " No Bisiesto" + "\n";
+
+                }
+            }
+            if (Request["Año"] == "Mostrar Bisiestos")
+            {
+                Model.resultado = Model.bisiesto;
+            }
+            if (Request["Año"] == "Mostrar No Bisiestos")
+            {
+                Model.resultado = Model.nobisiesto;
+            }
+            if (Request["Año"] == "Mostrar Todos")
+            {
+                Model.resultado = Model.todo;
+            }
+
+
+        }
+        <br />
+        <h2><strong>@Request["Año"]</strong></h2>
+        <div>
+            <strong>@Model.resultado</strong>
+        </div>
+        <br />
+        <a href="MostrarAños"> <<< Regresar</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+﻿@model Lab2_MVC_LLATASI.Models.ClsDispensador
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VisualizarDispensado</title>
+</head>
+<body>
+    <div>
+        <center>
+
+            <h1>Retiro de efectivo</h1>
+            <br />
+            <table border="1" cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr>
+                        <td>Billetes</td>
+                        <td>Cantidad</td>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>importe</td>
+                        <td>@Model.importe</td>
+                    </tr>
+                    <tr>
+                        <td>Billete 100</td>
+                        <td>@Model.b100</td>
+                    </tr>
+
+                    <tr>
+                        <td>Billete 50</td>
+                        <td>@Model.b50</td>
+                    </tr>
+
+                    <tr>
+                        <td>Billete 20</td>
+                        <td>@Model.b20</td>
+                    </tr>
+
+                    <tr>
+                        <td>Billete 10</td>
+                        <td>@Model.b10</td>
+                    </tr>
+
+                    <tr>
+                        <td>Moneda 5</td>
+                        <td>@Model.m5</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Moneda 2</td>
+                        <td>@Model.m2</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Moneda 1</td>
+                        <td>@Model.m1</td>
+                    </tr>
+
+                    <tr>
+                        <td>Moneda 0.50</td>
+                        <td>@Model.m050</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td>Total</td>
+                        <td>@Model.cantidad</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <br /><br />
+            <a href="Index"> Restornar</a>
+        </center>
+    </div>
+</body>
+</html>

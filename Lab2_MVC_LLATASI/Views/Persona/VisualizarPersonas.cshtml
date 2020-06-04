@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Lab2_MVC_LLATASI.Models.ClsPersona>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VisualizarPersonas</title>
+</head>
+<body>
+    <div>
+        <center>
+            <h1><b>Lista Personas</b></h1>
+            <br /><br />
+            <table border="1" bordercolor="#0000FF">
+                <tr>
+                    <th>Apellidos</th>
+                    <th>Nombres</th>
+                    <th>email</th>
+                    <th>Sexo</th>
+                    <th>Edad</th>
+                    <th>Talla</th>
+                    
+                </tr>
+                @foreach (var item in Model)
+                {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.apellido)</td>
+                <td>@Html.DisplayFor(modelItem => item.nombre)</td>
+                <td>@Html.DisplayFor(modelItem => item.email)</td>
+                <td>@Html.DisplayFor(modelItem => item.sexo)</td>
+                <td>@Html.DisplayFor(modelItem => item.edad)</td>
+                <td>@Html.DisplayFor(modelItem => item.talla)</td>,
+            </tr>
+                }
+            </table>
+        </center>
+    </div>
+</body>
+</html>

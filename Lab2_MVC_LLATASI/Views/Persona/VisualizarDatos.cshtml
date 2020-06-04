@@ -1,0 +1,28 @@
+﻿@model Lab2_MVC_LLATASI.Models.ClsPersona
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VisualizarDatos</title>
+</head>
+<body>
+    <div>
+        <h1><center><b>Datos Persona</b></center></h1>
+        <br />
+        <br />
+        <label>Apellidos: </label>@Model.apellido <br />
+        <label>Nombres: </label>@Model.nombre <br />
+        <label>Email: </label>@Model.email <br />
+        <label>Sexo: </label>@Model.sexo <br />
+        <label>Edad: </label>@Model.edad <br />
+        <label>Talla: </label>@Model.talla <br />
+        
+
+    </div>
+</body>
+</html>

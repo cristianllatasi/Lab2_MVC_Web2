@@ -1,0 +1,46 @@
+﻿@model Lab2_MVC_LLATASI.Models.ClsBisiesto
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MostrarAños</title>
+</head>
+<body>
+    <div>
+        <center><b><u>Bisiestos y no Bisiestos</u></b></center>
+        <br />
+        @using (Html.BeginForm("CalcularAños", "Bisiesto", FormMethod.Post))
+        {
+            <div>
+                @Html.LabelFor(Model => Model.inicio, "Año Inicial:")
+                @Html.TextBoxFor(Model => Model.inicio)
+            </div>
+            <div>
+                @Html.LabelFor(Model => Model.final, "Año Final:")
+                @Html.TextBoxFor(Model => Model.final)
+            </div>
+            <div>
+                <label>
+                    @Html.RadioButton("Año", "Mostrar Bisiestos", true)Años bisiesto
+                </label>
+                <br />
+                <label>
+                    @Html.RadioButton("Año", "Mostrar No Bisiestos")Años No bisiesto
+                </label>
+                <br />
+                <label>
+                    @Html.RadioButton("Año", "Mostrar Todos")Todos los Años
+                </label>
+                <br /><br />
+                <input type="submit" value="Mostrar Años" />
+            </div>
+
+        }
+    </div>
+</body>
+</html>
